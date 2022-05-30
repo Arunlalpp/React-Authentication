@@ -1,15 +1,16 @@
 import React, { useRef, useState } from 'react'
 import { Form, Card, Button, Alert } from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContex';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 
 export default function Signup() {
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
-    const { login } = useAuth()
+    const { signup } = useAuth()
     const [error, setError] = useState("")
     const [loading, setLoading] = useState(false)
+    const navigate =useNavigate()
 
 
     async function handleSubmit(e) {
@@ -23,9 +24,10 @@ export default function Signup() {
         try {
             setError("")
             setLoading(true)
-            await login(emailRef.current.value, passwordRef.current.value)
+            await signup(emailRef.current.value, passwordRef.current.value)
+            navigate("/")
         } catch {
-            setError("Failed to sign in")
+            setError("Failed to create an account")
         }
         setLoading(false)
     }
