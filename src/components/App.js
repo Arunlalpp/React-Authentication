@@ -9,11 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Container
-      className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}
-    >
-      <div className="w-100vh" style={{ maxWidth: "400px" }}>
+      <div>
         <Router>
           <AuthProvider>
             <Routes>
@@ -25,7 +21,6 @@ function App() {
           </AuthProvider>
         </Router>
       </div>
-    </Container>
   );
 }
 
