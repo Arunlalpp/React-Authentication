@@ -1,11 +1,9 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 
 export default function Dashboard() {
   return (
-    <div>Dashboard
-
-    <Link to="/Homepage">logout</Link>
+    <div>
+      <h2 className='text-red-600'>Dashboard</h2>
     </div>
   )
 }

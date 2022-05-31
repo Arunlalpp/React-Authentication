@@ -1,25 +1,36 @@
 import React from "react";
-import { Nav, Container, Navbar } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
+import { useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import NavLink from "./NavLink";
+import Service from './Service'
 
 export default function HomePage() {
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = `Service`;
+    navigate(path);
+  };
   return (
     <>
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <LinkContainer to="/">
-            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          </LinkContainer>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <LinkContainer to="/Login">
-              <Nav.Link href="#login">Login</Nav.Link>
-            </LinkContainer>
-          </Nav>
-        </Container>
-      </Navbar>
+    <NavLink />
+      <div className="landing-page">
+        <div className="banner-text">
+          <h1>
+            Emirates <span>Car</span> Care
+          </h1>
+          <div className="banner-description">
+            <p>
+              "We take pride in being a specialist in undertaking all types of
+              repairs and maintenance for luxury cars."
+            </p>
+          </div>
+          <div className="banner-suscribe">
+              <Button onClick={routeChange}>
+                View All
+              </Button>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

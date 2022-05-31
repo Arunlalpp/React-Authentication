@@ -4,7 +4,10 @@ import Signup from "./Signup";
 import Dashboard from "./Dashboard";
 import Login from "./Login";
 import HomePage from "./HomePage";
+import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Service from "./Service";
+import UserProfile from "./UserProfile";
 
 function App() {
   return (
@@ -16,6 +19,8 @@ function App() {
               <Route path="/" element={<Dashboard />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/login" element={<Login />}/>
+              <Route path="/userprofile" element={ <UserProfile />}/>
+              <Route path="/service" element={<Service />}/>
             </Routes>
           </AuthProvider>
         </Router>
