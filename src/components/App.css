@@ -1,5 +1,6 @@
-.landing-page
-{
+@import "bootstrap/dist/css/bootstrap.css";
+
+.landing-page {
     width: 100%;
     background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
     height: 90vh;
@@ -10,36 +11,85 @@
     text-align: left;
     flex-direction: column;
 }
-.banner-text 
-{
+
+.banner-text {
     position: absolute;
     margin: 0 2rem;
     top: 30%;
 }
-.banner-text h1
-{
+
+.banner-text h1 {
     font-size: 4rem;
     font-weight: 600;
     color: #01010a;
 }
-.banner-text span
-{
+
+.banner-text span {
     color: rgb(237, 9, 9);
 }
-.banner-description 
-{
+
+.banner-description {
     width: 60%;
     line-height: 1.2;
 }
-.banner-description p
-{
+
+.banner-description p {
     font-size: 1.5rem;
     color: #ffff;
     font-weight: 400;
     font-family: monospace;
-}  
-.banner-suscribe Button
-{
-    background:gray;
+}
+
+.banner-suscribe Button {
+    background: gray;
     border: none;
 }
+.container-card
+{
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50;
+    margin-top: 2rem;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: arial;
+  }
+  .card img
+  {
+      width: 100%;
+      display: block;
+  }
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+  
+
+
+  @media and (min-width: 460px)
+  {
+      
+  }

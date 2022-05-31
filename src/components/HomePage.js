@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import NavLink from "./NavLink";
-import Service from './Service'
+import ContainerCard from "./ContainerCard";
 
 export default function HomePage() {
   let navigate = useNavigate();
@@ -31,6 +31,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+    <ContainerCard />
     </>
   );
 }
