@@ -44,10 +44,20 @@
     background: gray;
     border: none;
 }
-.container-card
+.wrapper-heading
 {
     max-width: 95%;
     margin: 0 auto;
+    margin-top: 1.5rem;
+}
+.wrapper-heading h1
+{
+    color: #343a40;
+    font-size: 3rem;
+    font-weight: 600;
+}
+.container-card
+{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,16 +65,20 @@
     margin-top: 2rem;
 }
 .card-container {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 90%;
     margin: 0 auto;
     text-align: center;
     font-family: arial;
     min-height: 65vh;
   }
+  .card-container:hover
+  {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
   .card-container h1
   {
       font-weight: 900;
+      font-size: 2rem;
   }
   .card-container p
   {
@@ -99,6 +113,54 @@
     opacity: 0.7;
   }
   
+  /*...Slider....*/
+.slider-container
+{
+    width: 100%;
+    margin: 0 auto;
+}
+  .slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image
+{
+    width: 100%;
+    background-size: cover;
+
+}
+.right-arrow {
+    position: absolute;
+    top: 30%;
+    right: 32px;
+    font-size: 3rem;
+    color: black;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 30%;
+    left: 32px;
+    font-size: 3rem;
+    color: black;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+}
+.slide{
+    opacity: 0;
+    transition-duration: 1s ease;
+}
+.slide.active{
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+}
 
   @media only screen and (max-width: 760px)
   {
@@ -109,5 +171,10 @@
     .banner-description p
     {
         font-size: 1.2rem;
+    }
+    .wrapper-heading h1
+    {
+        text-align: center;
+        font-size: 2.5rem;
     }
   }

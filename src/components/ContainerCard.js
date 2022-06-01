@@ -3,6 +3,8 @@ import "./App.css";
 export default function ContainerCard() {
   return (
     <>
+      <div className="wrapper-heading">
+        <h1>Our Services</h1>
       <div className="container-card">
         <div class="card-container">
           <img
@@ -51,6 +53,7 @@ export default function ContainerCard() {
             <button>View Details</button>
           </p>
         </div>
+      </div>
       </div>
     </>
   );
