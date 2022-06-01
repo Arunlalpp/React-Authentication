@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import NavLink from "./NavLink";
 import ContainerCard from "./ContainerCard";
+import ContactUs from "./ContactUs";
 
 export default function HomePage() {
   let navigate = useNavigate();
@@ -12,7 +13,7 @@ export default function HomePage() {
   };
   return (
     <>
-    <NavLink />
+      <NavLink />
       <div className="landing-page">
         <div className="banner-text">
           <h1>
@@ -25,13 +26,12 @@ export default function HomePage() {
             </p>
           </div>
           <div className="banner-suscribe">
-              <Button onClick={routeChange}>
-                View All
-              </Button>
+            <Button onClick={routeChange}>View All</Button>
           </div>
         </div>
       </div>
-    <ContainerCard />
+      <ContainerCard />
+      <ContactUs />
     </>
   );
 }

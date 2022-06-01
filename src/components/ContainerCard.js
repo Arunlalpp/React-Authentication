@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-export default function ContainerCard() {
+export default function ContainerCard({bgimg, children}) {
   return (
     <>
       <div className="wrapper-heading">

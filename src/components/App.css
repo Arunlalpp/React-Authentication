@@ -195,6 +195,26 @@
       border-radius: 5px;
       border: solid 1px #004b23;
   }
+
+  /*...ContactUs....*/
+  .contact-wrapper
+  {
+      margin: 0 auto;
+      margin-top: 2rem;
+  }
+  .contact-banner
+  {
+      background-image: url('https://img.freepik.com/free-photo/abstract-luxury-gold-yellow-gradient-studio-wall-well-use-as-backgroundlayoutbanner-product-presentation_1258-96092.jpg?t=st=1654080069~exp=1654080669~hmac=5331026822af939ed5e2b736e99226ca4ab7bf8469879f43272be255fc547ba2&w=900');
+      background-size: cover;
+      height: 90vh;
+      position: relative;
+  }
+  .contact-banner-text
+  {
+      position: absolute;
+      top: 30%;
+      left: 10%;
+  }
   @media only screen and (max-width: 760px)
   {
     .container-card
