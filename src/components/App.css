@@ -1,5 +1,3 @@
-
-
 .landing-page {
     width: 100%;
     background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
@@ -44,6 +42,29 @@
     background: gray;
     border: none;
 }
+
+
+/*....Our Services....*/
+.wrapper-banner
+{
+    background-image: url('https://images.unsplash.com/photo-1511994477422-b69e44bd4ea9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1079&q=80');
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+}
+.banner-service-text 
+{
+    top: 30%;
+    position: absolute;
+    text-align:center;
+    left: 30%;
+}
+.banner-service-text span
+{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #ffd100;
+}    
 .wrapper-heading
 {
     max-width: 95%;
@@ -55,6 +76,12 @@
     color: #343a40;
     font-size: 3rem;
     font-weight: 600;
+    transition: all 0.2s;
+}
+.wrapper-heading h1:hover
+{
+   text-decoration: underline #343a40;
+   cursor: pointer;
 }
 .container-card
 {
@@ -112,56 +139,50 @@
   .card-container button:hover {
     opacity: 0.7;
   }
-  
-  /*...Slider....*/
-.slider-container
-{
-    width: 100%;
-    margin: 0 auto;
-}
-  .slider {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.image
-{
-    width: 100%;
-    background-size: cover;
 
-}
-.right-arrow {
-    position: absolute;
-    top: 30%;
-    right: 32px;
-    font-size: 3rem;
-    color: black;
-    cursor: pointer;
-    z-index: 10;
-    user-select: none;
-}
+  /*.... Ourteam...*/
 
-.left-arrow {
-    position: absolute;
-    top: 30%;
-    left: 32px;
-    font-size: 3rem;
-    color: black;
-    cursor: pointer;
-    z-index: 10;
-    user-select: none;
-}
-.slide{
-    opacity: 0;
-    transition-duration: 1s ease;
-}
-.slide.active{
-    opacity: 1;
-    transition-duration: 1s;
-    transform: scale(1.08);
-}
-
+  .team-banner
+  {
+      background-image: url('https://img.freepik.com/free-photo/group-mechanic-staff-car-service-team-worker-people-garage-happy-smile-hand-risign_43300-3121.jpg?w=740');
+      background-size: cover;
+      height: 90vh;
+      width: 100%;
+      position: relative;
+  }
+  .team-banner-des
+  {
+      position: absolute;
+      top: 25%;
+      text-align: left;
+      vertical-align: middle;
+      line-height: 1.3;
+      max-width: 50%;
+      margin: 0 2rem;
+  }
+  .team-banner-des h1
+  {
+      font-size: 3rem;
+      font-weight: 600;
+      font-family: monospace;
+      color: #dee2e6;
+  }
+  .team-banner-des p
+  {
+      font-size: 1.2rem;
+      color: #dee2e6;
+      line-height: 1.5;
+  }
+  .banner-learnmore
+  {
+      background: #161a1d;
+      border: none;
+      padding: 10px 10px;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      border: solid 1px #004b23;
+  }
   @media only screen and (max-width: 760px)
   {
     .container-card

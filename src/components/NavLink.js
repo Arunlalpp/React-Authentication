@@ -14,7 +14,9 @@ export default function NavLink() {
             </Navbar.Brand>
           </LinkContainer>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <LinkContainer to="/">
+              <Nav.Link href="home">Home</Nav.Link>
+            </LinkContainer>
             <LinkContainer to="/ourteam">
               <Nav.Link href="Ourteam">Ourteam</Nav.Link>
             </LinkContainer>

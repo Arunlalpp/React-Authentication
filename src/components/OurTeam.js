@@ -1,82 +1,25 @@
 import React from "react";
 import NavLink from "./NavLink";
-import { useState, useRef, useEffect } from "react";
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
-
-const featuredProducts = [
-  "/images/hero_11.jpg",
-  "/images/hero_12.jpg",
-  "/images/hero_13.jpg",
-  "/images/hero_14.jpg",
-  "/images/hero_15.jpg",
-  "/images/hero_16.jpg",
-];
-let count = 0;
-let slideInterval;
 
 export default function OurTeam() {
-  const [current, setCurrent] = useState(false);
-
-  const slideRef = useRef();
-
-  const removeAnimation = () => {
-    slideRef.current.classList.remove("fade-anim");
-  };
-
-  useEffect(() => {
-    slideRef.current.addEventListener("animationend", removeAnimation);
-    slideRef.current.addEventListener("mouseenter", pauseSlider);
-    slideRef.current.addEventListener("mouseleave", startSlider);
-
-    startSlider();
-    return () => {
-      pauseSlider();
-    };
-  }, []);
-  const startSlider = () => {
-    slideInterval = setInterval(() => {
-      handleOnNextClick();
-    }, 3000);
-  };
-
-  const pauseSlider = () => {
-    clearInterval(slideInterval);
-  };
-
-  const handleOnNextClick = () => {
-    count = (count + 1) % featuredProducts.length;
-    setCurrent(count);
-    slideRef.current.classList.add("fade-anim");
-  };
-  const handleOnPrevClick = () => {
-    const productsLength = featuredProducts.length;
-    count = (current + productsLength - 1) % productsLength;
-    setCurrent(count);
-    slideRef.current.classList.add("fade-anim");
-  };
-
   return (
-    <div>
+    <>
       <NavLink />
-      <div className="slider-container">
-        <section ref={slideRef} className="slider">
-          <div>
-            <img
-              src={featuredProducts[current]}
-              alt="travel"
-              className="image"
-            />
-          </div>
-          <FaArrowAltCircleLeft
-            className="left-arrow"
-            onClick={handleOnPrevClick}
-          />
-          <FaArrowAltCircleRight
-            className="right-arrow"
-            onClick={handleOnNextClick}
-          />
-        </section>
+      <div className="team-banner">
+        <div className="team-banner-des">
+          <h1>we can repair anything</h1>
+          <p>
+            "We take pride in being a specialist in undertaking all types of
+            repairs and maintenance for luxury cars. No matter how complicated
+            your problems, our experts will help you keep your vehicles always
+            in super form. Our team of experienced and reliable mechanics
+            provide an honest appraisal of any required car maintenance. Hence,
+            you will have peace of mind knowing that your prized possession is
+            in good hands."
+          </p>
+          <button className="banner-learnmore">Learnmore</button>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
