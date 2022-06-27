@@ -5,13 +5,15 @@ import NavLink from "./NavLink";
 import ContainerCard from "./ContainerCard";
 import ContactUs from "./ContactUs";
 
+
+
 export default function HomePage() {
   let navigate = useNavigate();
   const routeChange = () => {
     let path = `Service`;
     navigate(path);
   };
-  return (
+  return ( 
     <>
       <NavLink />
       <div className="landing-page">
