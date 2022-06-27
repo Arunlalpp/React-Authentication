@@ -1,7 +1,6 @@
 import React from "react";
 import { AuthProvider } from "../contexts/AuthContex";
 import Signup from "./Signup";
-import Dashboard from "./OurTeam";
 import Login from "./Login";
 import HomePage from "./HomePage";
 import "./App.css";
@@ -17,7 +16,6 @@ function App() {
           <AuthProvider>
             <Routes>
             <Route exact path="/" element={<HomePage />} />
-              <Route path="/" element={<Dashboard />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/login" element={<Login />}/>
               <Route path="/userprofile" element={ <UserProfile />}/>
